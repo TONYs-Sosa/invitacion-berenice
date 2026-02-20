@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // Se agregó useRef
 import { MapPin, Clock, Beer, Calendar, MessageCircle, Star } from 'lucide-react';
 
 interface TimeLeft {
@@ -11,6 +11,21 @@ interface TimeLeft {
 
 export default function InvitacionCumple() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ dias: 0, horas: 0, min: 0, seg: 0 });
+  
+  // --- LÓGICA DE MÚSICA (Faltaba esto) ---
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   useEffect(() => {
     // FECHA: 07 de Marzo de 2026 a las 18:00
@@ -62,6 +77,26 @@ export default function InvitacionCumple() {
         </div>
       </section>
 
+      {/* --- BOTÓN DE MÚSICA POSICIONADO --- */}
+      <div className="relative z-20 flex justify-center -mt-8 mb-8">
+        <button 
+          onClick={toggleMusic}
+          className={`
+            flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-500
+            ${isPlaying 
+              ? 'bg-white text-black scale-100 shadow-none' 
+              : 'bg-yellow-500 text-black shadow-[0_0_20px_rgba(234,179,8,0.6)] animate-bounce'
+            }
+          `}
+        >
+          {isPlaying ? (
+            <><span>⏸️</span> PAUSAR MÚSICA</>
+          ) : (
+            <><span>🎵</span> ¡DALE PLAY A LA FIESTA!</>
+          )}
+        </button>
+        <audio ref={audioRef} src="/musica.mp3" loop />
+      </div>
       {/* --- COUNTDOWN --- */}
       <section className="bg-yellow-600 py-10">
         <div className="flex justify-center gap-8 md:gap-16 text-center">
