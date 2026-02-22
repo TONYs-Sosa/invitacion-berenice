@@ -120,16 +120,16 @@ export default function InvitacionCumple() {
             <div className="space-y-6 text-gray-300">
               <div className="flex items-center gap-4">
                 <Clock className="text-yellow-500" />
-                <span>6:00 PM - ¡Hasta que el cuerpo aguante!</span>
+                <span> 5:30 PM - ¡Hasta que el cuerpo aguante!</span>
               </div>
               <div className="flex items-start gap-4">
                 <MapPin className="text-yellow-500 mt-1" />
-                <p>Río Grande 20, Francisco Villa,<br />Azcapotzalco, CDMX</p>
+                <p>Salón LA Cuevita en el Andador,<br />Azcapotzalco, CDMX</p>
               </div>
             </div>
             {/* LINK DE GOOGLE MAPS */}
             <a 
-              href="https://maps.app.goo.gl/FVuvedyiZYeHnPUy5"
+              href="https://maps.app.goo.gl/jH1A43FBQFLwr1TP9"
               target="_blank"
               className="mt-8 block text-center bg-white text-black font-bold py-4 rounded-xl hover:bg-yellow-500 transition-colors"
             >
