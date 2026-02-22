@@ -124,7 +124,7 @@ export default function InvitacionCumple() {
               </div>
               <div className="flex items-start gap-4">
                 <MapPin className="text-yellow-500 mt-1" />
-                <p>Salón LA Cuevita en el Andador,<br />Azcapotzalco, CDMX</p>
+                <p>Salón La Cuevita en el Andador,<br />Azcapotzalco, CDMX</p>
               </div>
             </div>
             {/* LINK DE GOOGLE MAPS */}
