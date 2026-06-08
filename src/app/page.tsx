@@ -156,7 +156,7 @@ export default function InvitacionCumple() {
       <section className="py-24 text-center bg-gradient-to-t from-black to-transparent">
         <h2 className="text-4xl font-black mb-8 uppercase tracking-tighter">¿Cuento contigo?</h2>
         <a 
-          href="https://wa.me/5511185743?text=¡Hola Berenice! Confirmo mi asistencia a tu cumple." 
+          href="https://wa.me/5555555555?text=¡Hola Berenice! Confirmo mi asistencia a tu cumple." 
           target="_blank"
           className="inline-flex items-center gap-3 bg-[#25D366] text-white px-12 py-6 rounded-2xl font-black text-xl hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] transition-all"
         >
